@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "stryker": "stryker run"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +38,7 @@
     "@angular/cli": "^16.2.6",
     "@angular/compiler-cli": "^16.2.0",
     "@elgervb/eslint-config": "^0.1.0",
+    "@stryker-mutator/core": "^7.3.0",
     "@types/jest": "^29.5.6",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
