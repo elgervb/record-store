@@ -9,11 +9,17 @@
         "*.ts"
       ],
       "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
+        "@elgervb",
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json",
+          "tsconfig.spec.json"
+        ],
+        "createDefaultProgram": true
+      },
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
