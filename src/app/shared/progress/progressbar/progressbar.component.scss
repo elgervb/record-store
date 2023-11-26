@@ -1,0 +1,40 @@
+
+:host {
+  display: block;
+
+  --progressbar-background: var(--color-primary);
+  --progressbar-foreground: var(--color-secondary);
+  --progressbar-height: .25rem;
+  --progressbar-width: 100%;
+  --progressbar-color: darken(#{var(--progressbar-foreground)}, 10%);
+  --progressbar-color-gt-50: lighten(#{var(--progressbar-background)}, 10%);
+}
+
+.progressbar {
+  background-color: var(--progressbar-background);
+  color: var(--progressbar-color);
+  height: var(--progressbar-height);
+  position: relative;
+  width: var(--progressbar-width);
+
+  &.progress--with-text::after {
+    content: attr(data-progress) '%';
+    display: block;
+    font-size: 1em;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.progress--gt-50 {
+    color: var(--progressbar-color-gt-50);
+  }
+
+  .progressbar__inner {
+    background-color: var(--progressbar-foreground);
+    height: 100%;
+    transition: width .1s ease-out;
+    width: 0;
+  }
+}

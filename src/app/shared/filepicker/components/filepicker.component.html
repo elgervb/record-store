@@ -1,0 +1,7 @@
+
+<input #native type="file" id="native-file-picker" [multiple]="multiple" (change)="onChange()"/>
+
+<div class="droparea">
+  <span>Drop your files here, or </span> <label for="native-file-picker">pick your files</label>.
+  <mat-progress-bar mode="determinate" [value]="getProgress()"></mat-progress-bar>
+</div>
